@@ -33,34 +33,5 @@ public class PersonController {
         return persons;
     }
 
-    /*public byte[] listPersons()
-    {
-        ArrayList<Person> persons = (ArrayList<Person>) database.getStorageObjects();
 
-        return convertToJson(persons);
-    }*/
-
-   /* private byte[] convertToJson(Person person)
-    {
-        JsonConverter js = new JsonConverter(person);
-        String s = js.personToJsonString();
-        byte[] jsonData = s.getBytes();
-        return jsonData;
-    }*/
-
-    private byte[] convertToJson(ArrayList<Person> persons)
-    {
-        JsonConverter js = new JsonConverter(persons);
-        String s = js.personToJsonString();
-        byte[] jsonData = s.getBytes();
-        return jsonData;
-    }
-
-   /* private byte[] convertToJson(HashMap<String, String> hM)
-    {
-        JsonConverter js = new JsonConverter(hM);
-        String s = js.personToJsonString();
-        byte[] jsonData = s.getBytes();
-        return jsonData;
-    }*/
 }
